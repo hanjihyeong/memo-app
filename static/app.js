@@ -44,7 +44,7 @@ function displayMemo(memo) {
 }
 
 async function readMemo() {
-  const res = await fetch("/memos");
+  const res = await fetch("/memos?sort_by=created&sort_order=desc");
   const jsonRes = await res.json();
   const ul = document.querySelector("#memo-ul");
   ul.innerHTML = "";
